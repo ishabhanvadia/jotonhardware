@@ -1,0 +1,131 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  
+}
+
+body {
+    position: relative;
+    background-image: url(upload/joton-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(54, 52, 52, 0.6); /* Dark Transparent Layer */
+    z-index: 1;
+}
+
+.container {
+    background: linear-gradient(135deg, #1e1e1e, #363434, #4d4b4b);
+    position: relative;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 15px;
+
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1rem;
+    margin: 15px 0;
+}
+
+.social-icons {
+    text-align: center; /* Center the icons */
+    margin-top: 20px;
+}
+
+.social-icons a {
+    font-size: 30px; /* Big size */
+    color:white; /* Orange color */
+    margin: 6px; /* Space between icons */
+    text-decoration: none; /* Remove underline */
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+    color: #f07d2a; /* Darker orange on hover */
+}
+
+/* Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.delay {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Glowing Background Animation */
+body::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 127, 80, 0.4);
+    border-radius: 50%;
+    top: 20%;
+    left: 10%;
+    animation: glow 6s infinite alternate ease-in-out;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 87, 34, 0.4);
+    border-radius: 50%;
+    bottom: 20%;
+    right: 10%;
+    animation: glow 6s infinite alternate-reverse ease-in-out;
+}
+
+@keyframes glow {
+    from {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    to {
+        transform: scale(1.5);
+        opacity: 0.3;
+    }
+}
