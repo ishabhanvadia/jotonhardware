@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joton - Coming Soon</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(135deg, #ec8636, #ec8636);
+        }
+        .left-section {
+            width: 50%;
+            background: linear-gradient(130deg,#4d4b4b,#363434, #1e1e1e );
+            
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px;
+            transform: translateX(-100%);
+            animation: slideIn 1s ease-in-out forwards;
+        }
+        .logo {
+            max-width: 270px;
+            margin-bottom: 20px;
+        }
+        .right-section {
+            width: 50%;
+            background: url('upload/joton-bg.jpg') no-repeat center center/cover;
+            position: relative;
+            animation: pulse 3s infinite;
+        }
+        .right-section::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out 0.5s forwards;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out 1s forwards;
+        }
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out 1.5s forwards;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 1.8rem;
+            transition: transform 0.3s ease-in-out;
+            z-index: 1; /* Ensures visibility over background overlay */
+        }
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #f07d2a;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="left-section">
+        <img src="upload/1.png" alt="Company Logo" class="logo">
+        <h1>Something Exciting is Coming!</h1>
+        <p>Our site is under maintenance. We're working hard to bring you a better experience – check back soon!</p>
+        
+        <div class="social-icons">
+            <a href="https://wa.me/919100015700" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/joton_hardware_products?igsh=MTFxZXEwemJrZHlucw%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/@jotonhardware_?si=8Qc9Riwdml3OtAad"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/share/191Tt2Ng9m/?mibextid=wwXIfr"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+            <a href="#"><i class="fa fa-phone"></i></a>
+
+        </div>
+    </div>
+    <div class="right-section"></div>
+</body>
+</html>
