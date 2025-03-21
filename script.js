@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".fade-in").forEach((el) => {
-        el.style.opacity = "1";
-        el.style.transform = "translateY(0)";
-    });
-});
+// Optional: Add interactivity or animations if needed
+document.querySelector('.home-btn').addEventListener('click', () => {
+    alert('Taking you back to the homepage...');
+    // You can also redirect to the homepage programmatically
+    // window.location.href = '/';
+  });
